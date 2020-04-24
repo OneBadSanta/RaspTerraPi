@@ -1,4 +1,4 @@
-# RaspTerraPi
+# RaspTerraPi 
 This repo was put together as a way to manage my Raspberry Pi with Terraform and Helm charts. There are a few manual steps, but for the most part Terraform manages everything. PR's welcome
 
 ## Tested on:
