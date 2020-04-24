@@ -1,0 +1,26 @@
+adminPassword: "${adminPassword}"
+
+persistentVolumeClaim:
+  enabled: true
+
+virtualHost: ${pihole_hostname}
+
+doh:
+  enabled: true
+
+serviceTCP:
+  type: LoadBalancer
+  loadBalancerIP: ${loadbalancerip}
+  annotations:
+    metallb.universe.tf/allow-shared-ip: pihole-svc
+
+serviceUDP:
+  type: LoadBalancer
+  loadBalancerIP: ${loadbalancerip}
+  annotations:
+    metallb.universe.tf/allow-shared-ip: pihole-svc
+
+dnsmasq:
+  additionalHostsEntries:
+  # Dnsmasq reads the /etc/hosts file to resolve ips. You can add additional entries if you like
+  - ${loadbalancerip} ${pihole_hostname} pihole
