@@ -94,7 +94,7 @@ The services directory holds Terraform code to install and configure [Metallb](h
     ```
     terraform apply
     ```
-#### NOTE: I have the `pihole_adminPassword` set as a variable that gets passed in when I run an apply. I personally dont care that my password is getting saved in state since it's in Terraform Cloud, but you might. Something to keep in mind.
+NOTE: I have the `pihole_adminPassword` set as a variable that gets passed in when I run an apply. I personally dont care that my password is getting saved in state since it's in Terraform Cloud, but you might. Something to keep in mind.
 
 ## Pi-hole
 At this point you should now be able to access your Pi-hole web interface witn the `pihole_ip` or `pihole_hostname` you set in `services.auto.tfvars`
