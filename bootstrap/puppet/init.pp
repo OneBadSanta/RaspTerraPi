@@ -17,3 +17,8 @@ exec { 'microk8s_configure':
   command  => "sudo microk8s enable helm3 metrics-server storage",
   provider => shell,
 }
+
+exec { 'ip_wlan0_configure':
+  command     => "sudo ip link set wlan0 promisc on",
+  provider    => shell,
+}
