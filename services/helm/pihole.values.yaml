@@ -24,3 +24,31 @@ dnsmasq:
   additionalHostsEntries:
   # Dnsmasq reads the /etc/hosts file to resolve ips. You can add additional entries if you like
   - ${loadbalancerip} ${pihole_hostname} pihole
+  - 192.168.86.20 shuttle
+  - 192.168.86.90 willmini
+  - 192.168.86.98 willphone
+  - 192.168.86.99 mbp15
+  - 192.168.86.250 printer 
+
+# adlists: {}
+  # If you want to provide blocklists, add them here.
+  # - https://hosts-file.net/grm.txt
+  # - https://reddestdream.github.io/Projects/MinimalHosts/etc/MinimalHostsBlocker/minimalhosts
+
+whitelist:
+  # If you want to provide whitelisted domains, add them here.
+  # - clients4.google.com
+  - api.datadoghq.com
+
+blacklist:
+  # If you want to have special domains blacklisted, add them here
+  # - *.blackist.com
+  - min-api.cryptocompare.com
+  - 172.217.5.206
+  - lax28s10-in-f206.1e100.net
+
+regex:
+  # Add regular expression blacklist items
+  # - (^|\.)facebook\.com$
+  - (^|\.)lax28s10-in-f14\.1e100\.net$
+  - (^|\.)lax28s10-in-f206\.1e100\.net$
